@@ -1,0 +1,164 @@
+ <!-- ══════════════════════════════════════
+       FLOATING LAUNCHER
+  ═══════════════════════════════════════ -->
+  <div class="ce-launcher" id="ceLauncher">
+    <div class="ce-launcher-pill" id="ceLauncherPill">Need help?</div>
+    <button class="ce-launcher-icon-btn" id="ceLauncherBtn" aria-label="Toggle chat">
+      <span class="ce-icon-chat"><i data-lucide="message-circle"></i></span>
+      <span class="ce-icon-close"><i data-lucide="x"></i></span>
+    </button>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CHAT WIDGET PANEL
+  ═══════════════════════════════════════ -->
+  <div class="ce-widget" id="ceWidget" role="dialog" aria-label="Chat with ContentEdge" aria-hidden="true">
+
+    <!-- ─── HOME VIEW ─── -->
+    <div class="ce-view ce-home-view active" id="ceHomeView">
+
+      <!-- Header -->
+      <div class="ce-header">
+        <div class="ce-header-bg"></div>
+        <div class="ce-header-overlay"></div>
+        <div class="ce-header-top">
+          <div class="ce-brand-avatar img"><img src="/assets/logo.png" alt="Logo"></div>
+        </div>
+        <div class="ce-header-body">
+          <h2>Hi There <span class="ce-wave">👋</span></h2>
+          <p>Welcome to ContentEdge. How can we help you today?</p>
+        </div>
+      </div>
+      <!-- Chat-with-us card -->
+              <div class="ce-home-card" id="ceHomeCard">
+                <div class="ce-home-card-left">
+                  <div class="ce-status-dot"></div>
+                  <div>
+                    <strong>Chat with us</strong>
+                    <span>We are online!</span>
+                  </div>
+                </div>
+                <button class="ce-cta-arrow" aria-label="Start chat"><i data-lucide="send"></i></button>
+              </div>
+      <!-- Home scrollable content -->
+      <div class="ce-home-content">
+
+        <!-- Popular topics label -->
+        <div class="ce-topic-label">Popular topics</div>
+
+        <!-- Topic menu cards -->
+        <div class="ce-topic-menu">
+
+          <button class="ce-topic-btn" type="button" data-topic="pricing">
+            <div class="ce-topic-icon pricing"><i data-lucide="indian-rupee"></i></div>
+            <div class="ce-topic-text">
+              <strong>Pricing &amp; Quotes</strong>
+              <span>Get estimates for your project</span>
+            </div>
+            <i data-lucide="chevron-right" class="ce-topic-arrow"></i>
+          </button>
+
+          <button class="ce-topic-btn" type="button" data-topic="languages">
+            <div class="ce-topic-icon languages"><i data-lucide="languages"></i></div>
+            <div class="ce-topic-text">
+              <strong>Languages &amp; Services</strong>
+              <span>What we offer &amp; support</span>
+            </div>
+            <i data-lucide="chevron-right" class="ce-topic-arrow"></i>
+          </button>
+
+          <button class="ce-topic-btn" type="button" data-topic="contact">
+            <div class="ce-topic-icon contact"><i data-lucide="contact"></i></div>
+            <div class="ce-topic-text">
+              <strong>Contact &amp; Support</strong>
+              <span>Reach our team directly</span>
+            </div>
+            <i data-lucide="chevron-right" class="ce-topic-arrow"></i>
+          </button>
+
+        </div>
+
+      </div><!-- /ce-home-content -->
+    </div><!-- /ce-home-view -->
+
+
+    <!-- ─── CHAT VIEW ─── -->
+    <div class="ce-view ce-chat-view" id="ceChatView">
+
+      <!-- Chat header -->
+      <div class="ce-chat-header">
+        <button class="ce-back-btn" id="ceBackBtn" aria-label="Go back">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <div class="ce-chat-header-info">
+          <div class="ce-avatar-sm img"><img src="/assets/logo.png" alt="Logo" class="avatar-img"></div>
+          <div>
+            <strong>CEdge AI</strong>
+            <span class="ce-status-text">● Online now</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message thread -->
+      <div class="ce-messages" id="ceMessages">
+        <div class="ce-msg-date">Today</div>
+
+        <!-- Initial bot greeting -->
+        <div class="ce-msg ce-msg-bot">
+          <div class="ce-msg-avatar img"><img src="/assets/logo.png" alt="Logo"></div>
+          <div class="ce-msg-content">
+            <div class="ce-msg-bubble">
+              Hi! 👋 Welcome to <strong>ContentEdge</strong>. I'm here to help you.<br>
+              Choose a topic or type your question below.
+            </div>
+            <span class="ce-msg-time">Just now</span>
+          </div>
+        </div>
+
+        <!-- Inline welcome topic menu (inside chat thread) -->
+        <div class="ce-inline-menu" id="ceInlineMenu">
+          <p class="ce-inline-menu-label">What can I help you with?</p>
+          <button class="ce-inline-btn" data-topic="pricing">
+            <i data-lucide="indian-rupee"></i> Pricing &amp; Quotes
+          </button>
+          <button class="ce-inline-btn" data-topic="languages">
+            <i data-lucide="languages"></i> Languages &amp; Services
+          </button>
+          <button class="ce-inline-btn" data-topic="contact">
+            <i data-lucide="contact"></i> Contact &amp; Support
+          </button>
+        </div>
+
+      </div><!-- /ce-messages -->
+
+      <!-- Input bar -->
+      <div class="ce-input-area">
+        <button class="ce-emoji-btn" id="emojiBtn" aria-label="Emoji"><i data-lucide="smile"></i></button>
+        <input
+          type="text"
+          class="ce-input"
+          id="ceInput"
+          placeholder="Enter your message..."
+          autocomplete="off"
+        />
+        <button class="ce-send-btn" id="ceSendBtn" aria-label="Send">
+          <i data-lucide="send"></i>
+        </button>
+      </div>
+
+    </div><!-- /ce-chat-view -->
+
+
+    <!-- ─── BOTTOM TABS ─── -->
+    <nav class="ce-tabs">
+      <button class="ce-tab active" id="ceHomeTab">
+        <i data-lucide="house"></i><span>Home</span>
+      </button>
+      <button class="ce-tab" id="ceChatTab">
+        <i data-lucide="message-square"></i><span>Chat</span>
+      </button>
+    </nav>
+
+    <div class="ce-powered">POWERED BY <mark>Content</mark><strong>Edge</strong></div>
+
+  </div><!-- /ce-widget -->
