@@ -243,7 +243,7 @@ const _mounted = new Map(); // id → { el, destroy }
  * Two call signatures — both supported:
  *
  *   Legacy (positional):
- *     mountComponent('chatbot', 'components/chatbot.html', onMount)
+ *     mountComponent('chatbot', '/components/chatbot.html', onMount)
  *
  *   Object config (preferred):
  *     mountComponent({
@@ -304,13 +304,13 @@ export function unmountComponent(id) {
    COMPONENT BOOTSTRAP
 ══════════════════════════════════════════════════ */
 
-mountComponent('header', 'components/header.html', () => {
+mountComponent('header', '/components/header.html', () => {
   initDropdowns();
 });
 
-mountComponent('footer', 'components/footer.html');
+mountComponent('footer', '/components/footer.html');
 
-mountComponent('chatbot', 'components/chatbot.html', () => {
+mountComponent('chatbot', '/components/chatbot.html', () => {
   // Dynamic import — no globals, no polling, no init flags.
   // The HTML is in the DOM by the time onMount fires, so
   // initChatbot() finds all its DOM refs immediately.
